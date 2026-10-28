@@ -1,6 +1,8 @@
 # Enterprise RAG Knowledge Base
 
-面向 AI 应用工程师实习 / 校招的企业知识库 RAG 项目。当前已实现文档上传与解析、字符级文本切分、文档与文本块持久化、Mock/真实 Embedding 适配、JSON 向量存储、Python 余弦相似度检索、RAG 编排、Mock/真实 OpenAI 兼容 LLM 和 Chat API。本地演示默认使用 Mock 服务，不需要购买额度或配置真实 API Key；真实百炼 text-embedding-v4、真实 DeepSeek LLM 以及隔离环境 RAG Chat 均已有独立验证证据。浏览器知识检索与 Chat 页面展示已在用户提供的截图场景中完成，完整浏览器链路和真实模型调用归因仍需谨慎区分；生产部署、并发稳定性、安全审计和完整质量评测仍未完成。
+Enterprise RAG Knowledge Base 是一个基于检索增强生成（RAG）的企业知识库应用，旨在帮助用户高效管理企业文档，并通过自然语言提问快速获取相关知识。系统支持文档上传、内容解析、文本分块、向量化存储、语义检索以及基于大语言模型的智能问答，并提供相关文档来源，提升回答的可追溯性。
+
+项目采用 FastAPI 构建后端服务，使用 React、TypeScript 和 Vite 构建前端界面。支持本地 Mock 模式进行开发与演示，也支持接入兼容 OpenAI API 协议的 Embedding 和 LLM 服务，便于后续扩展与集成。
 
 ## 技术栈
 
