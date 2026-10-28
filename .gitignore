@@ -1,0 +1,60 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- 环境变量 / 密钥 ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------- 测试 / 工具缓存 ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# ---------- IDE / 操作系统 ----------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---------- 日志 / 本地数据 ----------
+*.log
+logs/
+data/
+uploads/
+# 本地 SQLite 开发数据库及其临时文件；不要提交真实文档数据。
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ---------- 临时诊断产物 ----------
+.tmp-*/
+backend/.tmp-diagnostics/
+backend/pytest-of-*/
+
+.venv-test-*/
+*.db-*
+*.sqlite
+*.sqlite3

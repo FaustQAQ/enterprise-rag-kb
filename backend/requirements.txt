@@ -1,0 +1,63 @@
+# ============================================================
+# Web / API
+# ============================================================
+
+# FastAPI：HTTP 路由、依赖注入、请求校验、自动生成 OpenAPI 文档。
+fastapi==0.162.0
+
+# Uvicorn：运行 FastAPI 的 ASGI 服务器；[standard] 附带 watchfiles 热重载等常用组件。
+uvicorn[standard]==0.54.0
+
+# ============================================================
+# 配置 / 数据校验
+# ============================================================
+
+# Pydantic：请求/响应模型的数据校验与序列化，也是 pydantic-settings 的基础。
+pydantic==2.14.1
+
+# pydantic-settings：从环境变量和 .env 文件加载配置，并做类型转换与校验。
+pydantic-settings==2.16.1
+
+# python-dotenv：pydantic-settings 读取 .env 文件时使用的解析器。
+python-dotenv==1.2.4
+
+# ============================================================
+# 文档上传 / 解析
+# ============================================================
+
+# python-multipart：FastAPI 解析 multipart/form-data 文件上传所必需。
+python-multipart==0.0.32
+
+# pypdf：纯 Python 读取 PDF 并逐页提取文本，不依赖系统级 PDF 工具。
+pypdf==6.21.2
+
+# python-docx：读取 .docx 的段落正文；会根据自身依赖安装 lxml。
+python-docx==1.2.0
+
+# ============================================================
+# 数据库
+# ============================================================
+
+# SQLAlchemy：2.x ORM 与数据库访问层；[asyncio] 启用异步扩展（AsyncSession）。
+SQLAlchemy[asyncio]==2.1.6
+
+# asyncpg：可选的 PostgreSQL 异步驱动；默认 SQLite 开发无需 PostgreSQL。
+asyncpg==0.32.0
+
+# aiosqlite：SQLite 异步驱动，默认本地开发数据库与自动化测试均使用它。
+aiosqlite==0.22.1
+
+# pgvector：提供 SQLAlchemy 的 Vector 列类型，后续迁移到 PostgreSQL 向量索引时使用。
+# 当前向量以 JSON 数组保存，本阶段不创建 Vector 列，也不需要安装数据库扩展。
+pgvector==0.5.1
+
+# ============================================================
+# HTTP 客户端 / 测试
+# ============================================================
+
+# httpx2：Embedding 在线适配器调用 /embeddings 使用的异步 HTTP 客户端；
+# 同时也是 Starlette 1.x TestClient 的后端，因此不重复安装旧版 httpx。
+httpx2==2.16.0
+
+# pytest：单元测试与接口测试框架。
+pytest==9.1.1
